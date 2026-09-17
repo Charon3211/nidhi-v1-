@@ -153,6 +153,12 @@
     .progress-card img { width:100%; height:100%; min-height:17rem; object-fit:cover; }
     .progress-card::after { position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(15,13,12,.8)); content:""; pointer-events:none; }
     .progress-card figcaption { position:absolute; right:1rem; bottom:1rem; left:1rem; z-index:1; color:var(--cream); font:1.1rem "Archivo Black",Impact,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+    .client-progress { margin-top:3rem; padding-top:3rem; border-top:1px solid var(--line); }
+    .client-progress-heading { max-width:42rem; margin-bottom:1.3rem; }
+    .client-progress-grid { display:grid; gap:.7rem; }
+    .client-progress-card { display:grid; place-items:center; min-height:12rem; padding:1rem; border:1px dashed rgba(96,71,52,.55); border-radius:var(--radius); background:repeating-linear-gradient(-45deg,rgba(240,197,212,.55) 0 12px,rgba(252,247,217,.68) 12px 24px); color:var(--brown); text-align:center; }
+    .client-progress-card span { display:block; font:1.2rem "Archivo Black",Impact,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+    .client-progress-card small { display:block; margin-top:.4rem; color:rgba(60,43,34,.68); font-size:.76rem; }
     .testimonial { margin:0; padding:1.3rem; border-radius:var(--radius); background:var(--cream); box-shadow:var(--shadow); }
     .testimonial::before { display:block; color:var(--pink-deep); font-family:Georgia,serif; font-size:4rem; line-height:.55; content:"“"; }
     .testimonial p { margin:.8rem 0 1rem; font-size:1rem; font-weight:600; }
@@ -198,6 +204,8 @@
       .results-grid { grid-template-columns:1.2fr .8fr; align-items:start; }
       .progress-pair { gap:1rem; }
       .progress-card,.progress-card img { min-height:28rem; }
+      .client-progress-grid { grid-template-columns:repeat(2,1fr); gap:1rem; }
+      .client-progress-card { min-height:18rem; }
       .cta-box { padding:3rem; }
     }
     @media (min-width:980px) {
@@ -504,6 +512,13 @@
         <div>
           <figure class="testimonial depth-card reveal-item"><blockquote><p>“My progress came from showing up, staying consistent and trusting the process.”</p></blockquote><figcaption>— Nidhi · personal progress story</figcaption></figure>
           <p class="small muted" style="margin:1rem 0 0;">Progress looks different for everyone. Start where you are and keep building.</p>
+        </div>
+      </div>
+      <div class="container client-progress reveal" aria-labelledby="client-progress-title">
+        <div class="client-progress-heading"><p class="eyebrow">Client progress</p><h3 id="client-progress-title">Progress worth sharing</h3><p class="muted">Client Before and After stories will be added with permission when the photos are ready.</p></div>
+        <div class="client-progress-grid">
+          <div class="client-progress-card reveal-item"><span>Before</span><small>Photo coming soon</small></div>
+          <div class="client-progress-card reveal-item"><span>After</span><small>Photo coming soon</small></div>
         </div>
       </div>
     </section>
