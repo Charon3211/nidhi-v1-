@@ -144,24 +144,6 @@
     .coaching-meta dd { margin:.12rem 0 0; font-size:.9rem; }
     .region-note { display:inline-block; margin-top:1rem; padding:.3rem .6rem; border-radius:999px; background:var(--brown); color:var(--cream); font-size:.7rem; font-weight:800; text-transform:uppercase; }
 
-    /* ---------- Service flashcards ---------- */
-    .flashcards-section { background:var(--brown-dark); color:var(--cream); }
-    .flashcards-section .eyebrow { color:var(--pink-deep); }
-    .flashcards-section .muted { color:rgba(252,247,217,.76); }
-    .flashcard-grid { display:grid; gap:1rem; }
-    .flashcard { position:relative; min-height:28rem; overflow:hidden; border:1px solid rgba(252,247,217,.24); border-radius:var(--radius); background:var(--brown); color:var(--cream); isolation:isolate; }
-    .flashcard img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.22,1,.36,1); }
-    .flashcard:nth-child(2) img,.flashcard:nth-child(4) img { object-position:center 42%; }
-    .flashcard-overlay { position:absolute; z-index:0; inset:0; background:linear-gradient(180deg,rgba(15,13,12,.08),rgba(15,13,12,.9)),linear-gradient(135deg,rgba(96,71,52,.1),rgba(15,13,12,.3)); pointer-events:none; }
-    .flashcard-content { position:absolute; right:1.25rem; bottom:1.25rem; left:1.25rem; z-index:1; }
-    .flashcard-number { display:block; margin-bottom:.8rem; color:var(--pink-deep); font:.78rem "Archivo Black",Impact,sans-serif; letter-spacing:.14em; }
-    .flashcard h3 { max-width:18rem; margin-bottom:.55rem; font-size:clamp(1.65rem,5vw,2.6rem); }
-    .flashcard p { max-width:22rem; color:rgba(252,247,217,.82); }
-    .flashcard-link { display:inline-flex; align-items:center; gap:.45rem; color:var(--cream); font:.75rem "Archivo Black",Impact,sans-serif; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color .2s ease,transform .2s ease; }
-    .flashcard-link::after { width:2rem; height:1px; background:currentColor; content:""; transition:width .2s ease; }
-    .flashcard:hover img,.flashcard:focus-within img { transform:scale(1.05); }
-    .flashcard-link:hover,.flashcard-link:focus-visible { color:var(--pink-deep); transform:translateX(.15rem); }
-    .flashcard-link:hover::after,.flashcard-link:focus-visible::after { width:3rem; }
 
     /* ---------- Results / testimonials / social proof ---------- */
     .results { background:var(--pink); }
@@ -212,8 +194,6 @@
       .program-list { grid-template-columns:repeat(2,1fr); align-items:stretch; }
       .program-card { grid-template-rows:auto 1fr auto; }
       .coaching-grid { grid-template-columns:repeat(2,1fr); }
-      .flashcard-grid { grid-template-columns:repeat(2,1fr); }
-      .flashcard:nth-child(2),.flashcard:nth-child(3) { margin-top:1rem; }
       .results-grid { grid-template-columns:1.2fr .8fr; align-items:start; }
       .proof-grid .photo-placeholder { min-height:11.5rem; }
       .cta-box { padding:3rem; }
@@ -221,7 +201,6 @@
     @media (min-width:980px) {
       nav { gap:1.25rem; }
       nav a { font-size:.76rem; }
-      .flashcard { min-height:31rem; }
       .hero { min-height:43rem; }
       .hero::before { width:25rem; height:25rem; top:2rem; right:-10rem; }
       .hero::after { width:17rem; height:17rem; bottom:-4rem; left:-8rem; }
@@ -413,7 +392,7 @@
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Nidhi FITS home">Nidhi <span>FITS</span></a>
       <nav aria-label="Main navigation">
-        <a href="#coaching">Coaching</a><a href="#offers">How I help</a><a href="#programs">Programs</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#contact">Start</a>
+        <a href="#coaching">Coaching</a><a href="#programs">Programs</a><a href="#results">Results</a><a href="#faq">FAQ</a><a href="#contact">Start</a>
       </nav>
     </div>
   </header>
@@ -485,37 +464,6 @@
       </div>
     </section>
 
-    <!-- ===================================================================
-         SERVICE FLASHCARDS: Four image-led ways Nidhi helps clients build
-         stronger, simpler and more consistent routines.
-         =================================================================== -->
-    <section class="section flashcards-section reveal" id="offers" aria-labelledby="offers-title">
-      <div class="container">
-        <div class="section-heading"><p class="eyebrow">How I help</p><h2 id="offers-title">Built around real life</h2><p class="muted">Practical coaching for stronger routines, clearer structure and steady progress.</p></div>
-        <div class="flashcard-grid">
-          <article class="flashcard depth-card reveal-item">
-            <img src="images/IMG_0941.PNG" alt="Fitness coach in olive athletic clothing" width="1271" height="1273" loading="lazy" decoding="async">
-            <div class="flashcard-overlay" aria-hidden="true"></div>
-            <div class="flashcard-content"><span class="flashcard-number">01</span><h3>Helping busy individuals</h3><p>Training that works around your schedule, not against it.</p><a class="flashcard-link" href="#coaching" data-magnetic>Explore coaching</a></div>
-          </article>
-          <article class="flashcard depth-card reveal-item">
-            <img src="images/IMG_4213.PNG" alt="Fitness training on a mat in a dark studio" width="1290" height="1221" loading="lazy" decoding="async">
-            <div class="flashcard-overlay" aria-hidden="true"></div>
-            <div class="flashcard-content"><span class="flashcard-number">02</span><h3>Effective, not complicated</h3><p>Simple workouts. Clear structure. Progress you can feel.</p><a class="flashcard-link" href="#programs" data-magnetic>View programs</a></div>
-          </article>
-          <article class="flashcard depth-card reveal-item">
-            <img src="images/IMG_0941.PNG" alt="Fitness coach ready to support a healthy routine" width="1271" height="1273" loading="lazy" decoding="async">
-            <div class="flashcard-overlay" aria-hidden="true"></div>
-            <div class="flashcard-content"><span class="flashcard-number">03</span><h3>Planned lifestyle + diet</h3><p>Practical routines that make healthy choices easier to follow.</p><a class="flashcard-link" href="#programs" data-magnetic>Build your plan</a></div>
-          </article>
-          <article class="flashcard depth-card reveal-item">
-            <img src="images/IMG_4213.PNG" alt="Beginner-friendly mobility training on a mat" width="1290" height="1221" loading="lazy" decoding="async">
-            <div class="flashcard-overlay" aria-hidden="true"></div>
-            <div class="flashcard-content"><span class="flashcard-number">04</span><h3>Complete beginner guide</h3><p>Start with confidence, learn the basics and build from there.</p><a class="flashcard-link" href="#coaching" data-magnetic>Start with confidence</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <!-- ===================================================================
          TRAINING PROGRAMS: Three structured launch offers with transparent
@@ -682,7 +630,7 @@
 
       const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
       const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
-      const activeObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => { entries.forEach((entry) => { if (!entry.isIntersecting) return; navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`)); document.body.dataset.tone = ({ about:'warm', programs:'light', coaching:'deep', offers:'deep', results:'warm', faq:'light', contact:'warm' })[entry.target.id] || 'light'; }); }, { rootMargin: '-42% 0px -48% 0px', threshold: 0 }) : null;
+      const activeObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => { entries.forEach((entry) => { if (!entry.isIntersecting) return; navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`)); document.body.dataset.tone = ({ about:'warm', programs:'light', coaching:'deep', results:'warm', faq:'light', contact:'warm' })[entry.target.id] || 'light'; }); }, { rootMargin: '-42% 0px -48% 0px', threshold: 0 }) : null;
       sections.forEach((section) => activeObserver?.observe(section));
 
       document.querySelectorAll('.faq-item').forEach((item) => {
