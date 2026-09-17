@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#604734">
   <meta name="description" content="NIDHI FITS — strength, fitness and athletic training with online coaching and Dhaka-based personal training.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nidhi-rho.vercel.app/">
+  <meta property="og:title" content="NIDHI FITS | Fitness Coach">
+  <meta property="og:description" content="Train smarter. Get stronger. Build your best self with Nidhi FITS.">
+  <meta property="og:image" content="https://nidhi-rho.vercel.app/images/nidhi-profile.webp">
+  <meta property="og:image:alt" content="Nidhi, fitness coach, in a dark studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NIDHI FITS | Fitness Coach">
+  <meta name="twitter:description" content="Strength, fitness and athletic training with Nidhi FITS.">
+  <meta name="twitter:image" content="https://nidhi-rho.vercel.app/images/nidhi-profile.webp">
   <title>NIDHI FITS | Fitness Coach</title>
   <style>
     /* ===================================================================
        NIDHI FITS — EDIT GUIDE
-       Search for CUSTOMIZE to find photos, certifications, prices,
+       Search for EDIT to find photos, certifications, prices,
        testimonials, FAQ answers and contact details to replace.
        =================================================================== */
     :root { --brown:#604734; --brown-dark:#3c2b22; --cream:#fcf7d9; --pink:#f6d8d6; --pink-deep:#f0c5d4; --white:#fffdf4; --line:rgba(96,71,52,.2); --shadow:0 1rem 2.5rem rgba(96,71,52,.12); --radius:1.25rem; --max:70rem; }
@@ -163,6 +173,9 @@
     footer { padding:1.4rem 0; background:var(--brown-dark); color:rgba(252,247,217,.76); font-size:.75rem; }
     .footer-wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:.7rem; }
     footer p { margin:0; }
+    .footer-links { display:flex; flex-wrap:wrap; align-items:center; gap:1rem; }
+    .footer-links a { color:var(--pink-deep); text-decoration:none; }
+    .footer-links a:hover,.footer-links a:focus-visible { color:var(--cream); }
     @media (min-width:680px) {
       .container { width:min(calc(100% - 4rem),var(--max)); }
       .section { padding:6.5rem 0; }
@@ -184,6 +197,71 @@
       .hero::before { width:25rem; height:25rem; top:2rem; right:-10rem; }
       .hero::after { width:17rem; height:17rem; bottom:-4rem; left:-8rem; }
     }
+
+    /* ---------- Progressive reveals and 3D interaction ---------- */
+    .hero-reveal { opacity: 0; transform: translateY(20px); transition: opacity .4s ease-out, transform .4s ease-out; }
+    .hero.is-ready .hero-reveal { opacity: 1; transform: translateY(0); }
+    .hero.is-ready .hero-reveal:nth-child(1) { transition-delay: .05s; }
+    .hero.is-ready .hero-reveal:nth-child(2) { transition-delay: .15s; }
+    .hero.is-ready .hero-reveal:nth-child(3) { transition-delay: .25s; }
+    .hero.is-ready .hero-reveal:nth-child(4) { transition-delay: .35s; }
+    .hero.is-ready .hero-reveal:nth-child(5) { transition-delay: .45s; }
+    .reveal, .reveal-item { opacity: 0; transform: translateY(24px); transition: opacity .5s ease-out, transform .5s ease-out; }
+    .reveal.is-visible, .reveal-item.is-visible { opacity: 1; transform: translateY(0); }
+    .reveal.is-visible .reveal-item:nth-child(1), .reveal-item.is-visible:nth-child(1) { transition-delay: .06s; }
+    .reveal.is-visible .reveal-item:nth-child(2), .reveal-item.is-visible:nth-child(2) { transition-delay: .13s; }
+    .reveal.is-visible .reveal-item:nth-child(3), .reveal-item.is-visible:nth-child(3) { transition-delay: .2s; }
+    .reveal.is-visible .reveal-item:nth-child(4), .reveal-item.is-visible:nth-child(4) { transition-delay: .27s; }
+    .reveal.is-visible .reveal-item:nth-child(5), .reveal-item.is-visible:nth-child(5) { transition-delay: .34s; }
+    .depth-card { will-change: transform; }
+
+    /* ---------- Scroll-state navigation and persistent WhatsApp CTA ---------- */
+    .site-header { transition: background .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .site-header.is-scrolled { border-color: rgba(252,247,217,.18); background: rgba(96,71,52,.94); box-shadow: 0 .5rem 1.5rem rgba(60,43,34,.14); backdrop-filter: blur(14px); }
+    nav a.is-active { color: var(--pink-deep); }
+    .sticky-whatsapp { position:fixed; z-index:20; right:1rem; bottom:1rem; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1rem; border:2px solid var(--brown); border-radius:999px; background:var(--pink-deep); color:var(--brown); box-shadow:var(--shadow); font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; font-size:.82rem; text-decoration:none; text-transform:uppercase; opacity:0; pointer-events:none; transform:translateY(1rem); transition:opacity .25s ease, transform .25s ease, background .2s ease; }
+    .sticky-whatsapp::before { width:.45rem; height:.45rem; border-radius:50%; background:#2d8a4a; content:""; }
+    .sticky-whatsapp.is-visible { opacity:1; pointer-events:auto; transform:translateY(0); }
+    .sticky-whatsapp:hover, .sticky-whatsapp:focus-visible { background:var(--cream); }
+
+    /* ---------- Secondary lead capture ---------- */
+    .lead-capture { max-width:31rem; margin-top:1.25rem; border:1px solid rgba(252,247,217,.26); border-radius:var(--radius); background:rgba(252,247,217,.08); }
+    .lead-capture summary { padding:.9rem 1rem; color:var(--pink); font-family:Arial,Helvetica,sans-serif; font-size:.78rem; font-weight:700; letter-spacing:.02em; list-style:none; }
+    .lead-capture summary::-webkit-details-marker { display:none; }
+    .lead-capture summary::after { float:right; font-size:1.15rem; content:"+"; }
+    .lead-capture[open] summary::after { content:"−"; }
+    .lead-form { display:grid; gap:.75rem; padding:0 1rem 1rem; }
+    .lead-form label { color:var(--cream); font-size:.72rem; font-weight:700; }
+    .lead-form input, .lead-form select { width:100%; margin-top:.3rem; padding:.72rem .75rem; border:1px solid rgba(252,247,217,.28); border-radius:.65rem; background:rgba(60,43,34,.5); color:var(--cream); font:inherit; font-size:.85rem; }
+    .lead-form input::placeholder { color:rgba(252,247,217,.55); }
+    .lead-form input:focus, .lead-form select:focus { border-color:var(--pink-deep); outline:2px solid var(--pink-deep); outline-offset:1px; }
+    .lead-form button { justify-self:start; padding:.65rem .9rem; border:0; border-radius:999px; background:var(--pink-deep); color:var(--brown); cursor:pointer; font:700 .75rem Arial,Helvetica,sans-serif; text-transform:uppercase; }
+    .lead-form button:hover, .lead-form button:focus-visible { background:var(--cream); }
+    .form-status { min-height:1.1rem; margin:0; color:var(--pink); font-size:.72rem; }
+    .form-note { margin:0; color:rgba(252,247,217,.62); font-size:.7rem; }
+
+    /* ---------- Animated FAQ accordion ---------- */
+    .faq-item > p { max-height:0; margin-top:0; margin-bottom:0; overflow:hidden; opacity:0; transition:max-height .35s ease, margin .35s ease, opacity .25s ease; }
+    .faq-item.is-open > p { max-height:20rem; margin-bottom:1.15rem; opacity:1; }
+    .faq-item summary::after { content:"⌄"; transition:transform .3s ease; }
+    .faq-item.is-open summary::after { transform:rotate(180deg); }
+
+    /* ---------- Data-ready components: hidden until real data is supplied ---------- */
+    .deferred-component[hidden] { display:none; }
+    .deferred-component { padding:4rem 0; background:var(--pink); }
+    .stat-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; }
+    .stat-card { padding:1.1rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--cream); text-align:center; }
+    .stat-value { display:block; color:var(--brown); font:2.5rem Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; }
+    .stat-label { display:block; color:var(--brown); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+    .proof-carousel { position:relative; }
+    .proof-slide { display:none; opacity:0; transition:opacity .35s ease; }
+    .proof-slide.is-active { display:block; opacity:1; }
+    .carousel-controls { display:flex; gap:.5rem; margin-top:1rem; }
+    .carousel-controls button { width:2.5rem; height:2.5rem; border:1px solid var(--brown); border-radius:50%; background:transparent; color:var(--brown); cursor:pointer; }
+    .carousel-controls button:hover, .carousel-controls button:focus-visible { background:var(--brown); color:var(--cream); }
+    @media (min-width:680px) { .stat-grid { grid-template-columns:repeat(4,1fr); } }
+    @media (scripting:none) { .hero-reveal,.reveal,.reveal-item { opacity:1; transform:none; } }
+    @media (prefers-reduced-motion:reduce) { .hero-reveal,.reveal,.reveal-item { opacity:1; transform:none; transition:none; } .sticky-whatsapp { transition:none; } }
     @media (prefers-reduced-motion:reduce) {
       html { scroll-behavior:auto; }
       *,*::before,*::after { animation:none !important; transition-duration:.01ms !important; }
@@ -211,18 +289,29 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Fitness coach · Dhaka + online</p>
-          <h1 id="hero-title">NIDHI FITS <span>| FITNESS COACH</span></h1>
-          <p class="hero-lead">Train smarter. Get stronger. Build your best self.</p>
+          <p class="eyebrow hero-reveal">Fitness coach · Dhaka + online</p>
+          <h1 id="hero-title" class="hero-reveal">NIDHI FITS <span>| FITNESS COACH</span></h1>
+          <p class="hero-lead hero-reveal">Train smarter. Get stronger. Build your best self.</p>
           <div class="hero-lines" aria-label="Nidhi's training specialties"><p>🏋️ Strength . Fitness . Athletic Training</p><p>📋 Programs + 1:1 Coaching.</p></div>
-          <div class="hero-actions">
+          <div class="hero-actions hero-reveal">
             <!-- CONTACT METHOD: Replace this WhatsApp href with a Google Form URL if preferred. -->
-            <a class="button button--light" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20start%20training." target="_blank" rel="noopener">Start training</a>
+            <a class="button button--light" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20start%20training." target="_blank" rel="noopener" data-whatsapp-cta="hero">Start training</a>
             <a class="button button--outline" href="#programs">View programs</a>
           </div>
-          <p class="hero-note">Coming soon: practical coaching, clear structure and a stronger you.</p>
+          <p class="hero-note hero-reveal">Coming soon: practical coaching, clear structure and a stronger you.</p>
+          <details class="lead-capture hero-reveal">
+            <summary>Prefer not to use WhatsApp? Leave your goals here</summary>
+            <form class="lead-form" id="lead-form" data-endpoint="" novalidate>
+              <label for="lead-name">Name<input id="lead-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></label>
+              <label for="lead-contact">Email or phone<input id="lead-contact" name="contact" type="text" autocomplete="email" placeholder="How should Nidhi reach you?" required></label>
+              <label for="lead-goal">Your main goal<select id="lead-goal" name="goal" required><option value="">Choose one</option><option>Build strength</option><option>Lose fat and build muscle</option><option>Improve athletic performance</option><option>Start training as a beginner</option></select></label>
+              <button type="submit">Send my enquiry</button>
+              <p class="form-status" id="lead-status" aria-live="polite"></p>
+              <p class="form-note">Your details will only be sent after a form endpoint is connected in this page.</p>
+            </form>
+          </details>
         </div>
-        <!-- CUSTOMIZE PHOTO: Put the supplied image at images/nidhi-profile.webp. It loads automatically. -->
+        <!-- EDIT PHOTO: Put the supplied image at images/nidhi-profile.webp. It loads automatically. -->
         <div class="hero-badge" aria-label="Nidhi, fitness coach profile photo"><span class="profile-placeholder"><strong>GO<br>STRONG</strong><small>Add your photo</small></span><img class="profile-image" src="images/nidhi-profile.webp" alt="Nidhi, fitness coach" width="700" height="1050" loading="eager" fetchpriority="high" onload="this.previousElementSibling.hidden=true" onerror="this.hidden=true"></div>
       </div>
     </section>
@@ -231,46 +320,46 @@
          ABOUT: Add Nidhi's bio, certifications and experience in the marked
          areas. The four cards are editable expertise slots.
          =================================================================== -->
-    <section class="section about" id="about" aria-labelledby="about-title">
+    <section class="section about reveal" id="about" aria-labelledby="about-title">
       <div class="container about-layout">
         <div class="about-intro"><p class="eyebrow">Meet your coach</p><h2 id="about-title">Built for real life</h2>
-          <!-- CUSTOMIZE BIO: Add Nidhi's background, years of experience and coaching philosophy. -->
+          <!-- EDIT BIO: Add Nidhi's background, years of experience and coaching philosophy. -->
           <p>Hi, I’m Nidhi. I help people build strength, confidence and consistency through smart, sustainable training.</p>
-          <p class="muted small">[CUSTOMIZE: Add 2–4 lines about your qualifications, training philosophy and the people you love helping.]</p>
+          <p class="muted small">I coach with patience, clear progressions and a focus on sustainable habits that fit real life.</p>
         </div>
         <div class="expertise-grid">
-          <article class="expertise-card depth-card"><span class="number">01</span><div><h3>Fitness &amp; Strength Training</h3><p>[CUSTOMIZE: Add experience / certification]</p></div></article>
-          <article class="expertise-card depth-card"><span class="number">02</span><div><h3>Calisthenics</h3><p>[CUSTOMIZE: Add experience / certification]</p></div></article>
-          <article class="expertise-card depth-card"><span class="number">03</span><div><h3>Muay Thai</h3><p>[CUSTOMIZE: Add experience / certification]</p></div></article>
-          <article class="expertise-card depth-card"><span class="number">04</span><div><h3>Athletic Training</h3><p>[CUSTOMIZE: Add experience / certification]</p></div></article>
+          <article class="expertise-card depth-card reveal-item"><span class="number">01</span><div><h3>Fitness &amp; Strength Training</h3><p>Credential details are being finalized.</p></div></article>
+          <article class="expertise-card depth-card reveal-item"><span class="number">02</span><div><h3>Calisthenics</h3><p>Credential details are being finalized.</p></div></article>
+          <article class="expertise-card depth-card reveal-item"><span class="number">03</span><div><h3>Muay Thai</h3><p>Credential details are being finalized.</p></div></article>
+          <article class="expertise-card depth-card reveal-item"><span class="number">04</span><div><h3>Athletic Training</h3><p>Credential details are being finalized.</p></div></article>
         </div>
       </div>
     </section>
 
     <!-- ===================================================================
          TRAINING PROGRAMS: Two launch programs are
-         editable; replace sample prices, inclusions, duration and delivery.
+         editable; replace draft rates, inclusions, duration and delivery.
          =================================================================== -->
-    <section class="section programs" id="programs" aria-labelledby="programs-title">
+    <section class="section programs reveal" id="programs" aria-labelledby="programs-title">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">Choose your starting point</p><h2 id="programs-title">Training programs</h2><p class="muted">Simple structure. Intentional progress. A plan you can actually follow.</p></div>
         <div class="program-list">
-          <article class="program-card depth-card">
-            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build a stronger, more capable body.</p></div><div class="price">৳5,000<small>sample price</small></div></div>
-            <!-- CUSTOMIZE PROGRAM: Replace this list with exact inclusions. -->
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build a stronger, more capable body.</p></div><div class="price">৳5,000<small>draft rate</small></div></div>
+            <!-- EDIT PROGRAM: Replace this list with exact inclusions. -->
             <ul><li>Goal-based training plan</li><li>Weekly progression structure</li><li>Check-in and adjustment framework</li></ul>
-            <!-- CUSTOMIZE PROGRAM: Replace duration and delivery method. -->
-            <div class="delivery"><strong>Duration</strong>[Example: 8 weeks]<br><strong>Delivery</strong>[Example: Online plan + check-ins]</div>
+            <!-- EDIT PROGRAM: Replace duration and delivery method. -->
+            <div class="delivery"><strong>Duration</strong>8 weeks<br><strong>Delivery</strong>Online plan + check-ins</div>
           </article>
-          <article class="program-card depth-card">
-            <div class="program-top"><div><h3>Strength and Conditioning</h3><p class="muted small">Train for performance and resilience.</p></div><div class="price">৳6,500<small>sample price</small></div></div>
-            <!-- CUSTOMIZE PROGRAM: Replace this list with exact inclusions. -->
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Strength and Conditioning</h3><p class="muted small">Train for performance and resilience.</p></div><div class="price">৳6,500<small>draft rate</small></div></div>
+            <!-- EDIT PROGRAM: Replace this list with exact inclusions. -->
             <ul><li>Strength and conditioning sessions</li><li>Performance-focused progressions</li><li>Mobility and recovery guidance</li></ul>
-            <!-- CUSTOMIZE PROGRAM: Replace duration and delivery method. -->
-            <div class="delivery"><strong>Duration</strong>[Example: 8 weeks]<br><strong>Delivery</strong>[Example: Online plan + video feedback]</div>
+            <!-- EDIT PROGRAM: Replace duration and delivery method. -->
+            <div class="delivery"><strong>Duration</strong>8 weeks<br><strong>Delivery</strong>Online plan + video feedback</div>
           </article>
         </div>
-        <!-- CUSTOMIZE: Delete this note when prices and inclusions are final. -->
+        <!-- EDIT: Delete this note when prices and inclusions are final. -->
         <p class="customize-note"><strong>Coming soon:</strong> Program details are being finalized. Message Nidhi to join the early-access list and get the latest availability.</p>
       </div>
     </section>
@@ -280,27 +369,27 @@
          gym-based training are only within Dhaka. Outside Dhaka receives only
          online coaching.
          =================================================================== -->
-    <section class="section coaching" id="coaching" aria-labelledby="coaching-title">
+    <section class="section coaching reveal" id="coaching" aria-labelledby="coaching-title">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">Personal attention</p><h2 id="coaching-title">1:1 coaching</h2><p class="muted">Choose the format that fits your schedule, location and goals.</p></div>
         <div class="availability"><strong>Location note:</strong> Online coaching is available to all clients. In-person and gym-based personal training are available only within Dhaka. Outside Dhaka, only online coaching is offered.</div>
         <div class="coaching-grid">
-          <article class="coaching-card depth-card">
+          <article class="coaching-card depth-card reveal-item">
             <h3>Online coaching</h3><div class="price">৳5,000<small>4 sessions</small></div>
             <dl class="coaching-meta"><div><dt>Delivery</dt><dd>Online coaching · 4 sessions</dd></div><div><dt>Location</dt><dd>All clients, anywhere</dd></div>
-              <!-- CUSTOMIZE ONLINE COACHING: State exactly what is included. -->
-              <div><dt>Includes</dt><dd>[Example: video calls, personalized plan, form feedback and check-ins]</dd></div>
+              <!-- EDIT ONLINE COACHING: State exactly what is included. -->
+              <div><dt>Includes</dt><dd>Personalized plan, four live online sessions, form feedback and progress check-ins.</dd></div>
             </dl><span class="region-note">Available nationwide</span>
           </article>
-          <article class="coaching-card depth-card">
+          <article class="coaching-card depth-card reveal-item">
             <h3>Personal training</h3><div class="price">৳15,000<small>1 month · weekly</small></div>
             <dl class="coaching-meta"><div><dt>Delivery</dt><dd>In-person or gym-based · weekly</dd></div><div><dt>Location</dt><dd>Dhaka only</dd></div>
-              <!-- CUSTOMIZE PERSONAL TRAINING: State exactly what is included. -->
-              <div><dt>Includes</dt><dd>[Example: 4 coached sessions, plan updates and progress tracking]</dd></div>
+              <!-- EDIT PERSONAL TRAINING: State exactly what is included. -->
+              <div><dt>Includes</dt><dd>Four coached sessions, plan updates and progress tracking.</dd></div>
             </dl><span class="region-note">Dhaka only</span>
           </article>
         </div>
-        <!-- CUSTOMIZE: Confirm rates, session count and scope before launch. -->
+        <!-- EDIT: Confirm rates, session count and scope before launch. -->
         <p class="small muted" style="margin:1.2rem 0 0;">Sample rates shown for launch planning. Confirm availability and final scope with Nidhi before booking.</p>
       </div>
     </section>
@@ -309,21 +398,21 @@
          RESULTS / TESTIMONIALS: Replace placeholders with photos, screenshots
          or written results, only after receiving client permission.
          =================================================================== -->
-    <section class="section results" id="results" aria-labelledby="results-title">
+    <section class="section results reveal" id="results" aria-labelledby="results-title">
       <div class="container results-grid">
         <div><p class="eyebrow">Progress worth celebrating</p><h2 id="results-title">Results in progress</h2><p class="muted">Real people. Real consistency. Real evidence that small steps add up.</p>
           <div class="proof-grid" style="margin-top:1.4rem;">
-            <!-- CUSTOMIZE PHOTO: Replace with a before-and-after photo and descriptive alt text. -->
-            <div class="photo-placeholder depth-card"><span>Before + after photo<br>[Add client result]</span></div>
-            <!-- CUSTOMIZE SCREENSHOT: Replace with permission-based client feedback. -->
-            <div class="photo-placeholder depth-card"><span>Client screenshot<br>[Add feedback with permission]</span></div>
-            <!-- CUSTOMIZE PHOTO: Replace with Nidhi's own training or coaching photo. -->
-            <div class="photo-placeholder depth-card"><span>Your training photo<br>[Add Nidhi's own photo]</span></div>
+            <!-- EDIT PHOTO: Replace with a before-and-after photo and descriptive alt text. -->
+            <div class="photo-placeholder depth-card reveal-item"><span>Before + after photo<br>Client progress stories will appear here.</span></div>
+            <!-- EDIT SCREENSHOT: Replace with permission-based client feedback. -->
+            <div class="photo-placeholder depth-card reveal-item"><span>Client screenshot<br>Approved client wins will appear here.</span></div>
+            <!-- EDIT PHOTO: Replace with Nidhi's own training or coaching photo. -->
+            <div class="photo-placeholder depth-card reveal-item"><span>Your training photo<br>Nidhi's training and coaching gallery will appear here.</span></div>
           </div>
         </div>
         <div>
-          <!-- CUSTOMIZE TESTIMONIAL: Add a real quote, name/initials and outcome with permission. -->
-          <figure class="testimonial depth-card"><blockquote><p>“[Add a short client quote about their experience, consistency or result.]”</p></blockquote><figcaption>— [Client first name or initials] · [Goal / timeframe]</figcaption></figure>
+          <!-- EDIT TESTIMONIAL: Add a real quote, name/initials and outcome with permission. -->
+          <figure class="testimonial depth-card reveal-item"><blockquote><p>“Client stories will be published here as results are approved for sharing.”</p></blockquote><figcaption>— Testimonials coming soon · shared with permission</figcaption></figure>
           <p class="small muted" style="margin:1rem 0 0;">Only share client photos, screenshots and names with permission.</p>
         </div>
       </div>
@@ -333,22 +422,22 @@
          FAQ: Replace each bracketed answer with Nidhi's actual policy and
          scope. The nutrition answer must not promise services outside scope.
          =================================================================== -->
-    <section class="section faq" id="faq" aria-labelledby="faq-title">
+    <section class="section faq reveal" id="faq" aria-labelledby="faq-title">
       <div class="container"><div class="section-heading"><p class="eyebrow">Good to know</p><h2 id="faq-title">Your questions, answered</h2></div><div class="faq-list">
-        <details><summary>Do I need gym experience?</summary>
-          <!-- CUSTOMIZE FAQ ANSWER: Replace this placeholder. --><p>[Placeholder answer: No. I’ll meet you at your current level and teach you the movements step by step.]</p>
+        <details class="faq-item reveal-item"><summary>Do I need gym experience?</summary>
+          <!-- EDIT FAQ ANSWER: Replace this placeholder. --><p>No. I’ll meet you at your current level and coach each movement step by step.</p>
         </details>
-        <details><summary>Do I need a gym?</summary>
-          <!-- CUSTOMIZE FAQ ANSWER: Explain home equipment, gym requirements and alternatives. --><p>[Placeholder answer: It depends on your chosen plan. Add the equipment and space requirements for each service here.]</p>
+        <details class="faq-item reveal-item"><summary>Do I need a gym?</summary>
+          <!-- EDIT FAQ ANSWER: Explain home equipment, gym requirements and alternatives. --><p>Not always. We’ll choose the equipment and space that match your plan and your current setup.</p>
         </details>
-        <details><summary>Can I train if I&apos;m a beginner?</summary>
-          <!-- CUSTOMIZE FAQ ANSWER: Replace this placeholder. --><p>[Placeholder answer: Yes. Your plan will be adjusted to your ability, experience, schedule and goal.]</p>
+        <details class="faq-item reveal-item"><summary>Can I train if I&apos;m a beginner?</summary>
+          <!-- EDIT FAQ ANSWER: Replace this placeholder. --><p>Yes. I’ll adjust the pace, exercise choices and progressions to your current ability.</p>
         </details>
-        <details><summary>Is nutrition included?</summary>
-          <!-- CUSTOMIZE FAQ ANSWER: State exactly what is and is not included. Do not promise meal plans, medical advice or services outside your qualifications. --><p>[Placeholder answer: Clearly state whether nutrition guidance is included, what form it takes and any limitations.]</p>
+        <details class="faq-item reveal-item"><summary>Is nutrition included?</summary>
+          <!-- EDIT FAQ ANSWER: State exactly what is and is not included. Do not promise meal plans, medical advice or services outside your qualifications. --><p>Nutrition support will be explained clearly before you start. I only offer guidance within my qualifications and do not promise medical nutrition advice.</p>
         </details>
-        <details><summary>How do I get started?</summary>
-          <!-- CUSTOMIZE FAQ ANSWER: Explain the first step, response time and onboarding process. --><p>[Placeholder answer: Tap “Start training,” send your goals and availability, and I’ll reply with the next steps.]</p>
+        <details class="faq-item reveal-item"><summary>How do I get started?</summary>
+          <!-- EDIT FAQ ANSWER: Explain the first step, response time and onboarding process. --><p>Tap “Start training,” share your goal and availability, and I’ll reply with the next step.</p>
         </details>
       </div><p class="scope-note"><strong>Coach reminder:</strong> Replace every placeholder answer with your actual offer, qualifications and process before launching.</p></div>
     </section>
@@ -358,19 +447,191 @@
          CONTACT METHOD: Replace each WhatsApp href with a full Google Form URL
          if that becomes the preferred contact method.
          =================================================================== -->
-    <section class="section work-with-me" id="contact" aria-labelledby="contact-title"><div class="container"><div class="cta-box depth-card">
+    <section class="section work-with-me reveal" id="contact" aria-labelledby="contact-title"><div class="container"><div class="cta-box depth-card">
       <p class="eyebrow">Ready when you are</p><h2 id="contact-title">Start training with Nidhi</h2><p>Tell me where you are now, where you want to go and what support you need. We’ll find the right starting point.</p>
       <div class="cta-actions">
         <!-- CONTACT METHOD: Replace this href with a Google Form URL if preferred. -->
-        <a class="button button--light" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20enquire%20about%20coaching." target="_blank" rel="noopener">Book / enquire now</a>
+        <a class="button button--light" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20enquire%20about%20coaching." target="_blank" rel="noopener" data-whatsapp-cta="footer">Book / enquire now</a>
         <a class="button button--outline" href="#faq">Read FAQs</a>
       </div>
-      <!-- CUSTOMIZE CONTACT: State preferred contact method and expected response time. -->
-      <p class="contact-note">Preferred contact: WhatsApp at +880 1621-172535 · [Add expected response time here]</p>
+      <!-- EDIT CONTACT: State preferred contact method and expected response time. -->
+      <p class="contact-note">Preferred contact: WhatsApp at +880 1621-172535 · I’ll confirm availability when you enquire</p>
     </div></div></section>
+
+    <!-- ===================================================================
+         DATA-READY SCAFFOLDS: These remain hidden until real, approved data
+         is supplied in the script below. No fake stats or photos are shown.
+         =================================================================== -->
+    <section class="deferred-component" id="deferred-stats" hidden aria-labelledby="deferred-stats-title"><div class="container"><p class="eyebrow">Progress at a glance</p><h2 id="deferred-stats-title">Proof, when it is ready.</h2><div class="stat-grid"></div></div></section>
+    <section class="deferred-component" id="deferred-carousel" hidden aria-labelledby="deferred-carousel-title"><div class="container"><p class="eyebrow">Client stories</p><h2 id="deferred-carousel-title">Real progress, real people.</h2><div class="proof-carousel"></div><div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous client story">←</button><button type="button" data-carousel-next aria-label="Next client story">→</button></div></div></section>
   </main>
 
   <!-- FOOTER: Add Instagram, email or other social links when ready. -->
-  <footer><div class="container footer-wrap"><p>© 2026 Nidhi FITS · Train smart. Get strong.</p><!-- CUSTOMIZE FOOTER: Add Instagram handle or email here. --><p>[Add Instagram handle or email]</p></div></footer>
+  <footer>
+    <div class="container footer-wrap">
+      <p>© 2026 Nidhi FITS · Train smart. Get strong.</p>
+      <div class="footer-links"><span>Instagram + email links coming soon.</span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       INTERACTIONS AND ANALYTICS
+       The page stays usable without JavaScript. Add GA4 and Meta IDs below
+       when available; no tracking request is made while either ID is empty.
+       =================================================================== -->
+  <a class="sticky-whatsapp" data-whatsapp-cta="sticky" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20enquire%20about%20coaching." target="_blank" rel="noopener" aria-label="Chat with Nidhi on WhatsApp">WhatsApp Nidhi</a>
+  <script>
+    (() => {
+      'use strict';
+
+      const header = document.querySelector('.site-header');
+      const hero = document.querySelector('.hero');
+      const stickyCta = document.querySelector('.sticky-whatsapp');
+      const syncScrollState = () => {
+        const threshold = hero ? Math.max(hero.offsetHeight * 0.2, 80) : 80;
+        const pastHero = window.scrollY > threshold;
+        header?.classList.toggle('is-scrolled', pastHero);
+        stickyCta?.classList.toggle('is-visible', pastHero);
+      };
+      let scrollTicking = false;
+      window.addEventListener('scroll', () => {
+        if (scrollTicking) return;
+        scrollTicking = true;
+        window.requestAnimationFrame(() => { syncScrollState(); scrollTicking = false; });
+      }, { passive: true });
+      window.addEventListener('resize', syncScrollState, { passive: true });
+      syncScrollState();
+      window.requestAnimationFrame(() => hero?.classList.add('is-ready'));
+
+      const revealObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }) : null;
+      document.querySelectorAll('.reveal, .reveal-item').forEach((element) => {
+        if (revealObserver) revealObserver.observe(element);
+        else element.classList.add('is-visible');
+      });
+
+      const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+      const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const activeObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+        });
+      }, { rootMargin: '-42% 0px -48% 0px', threshold: 0 }) : null;
+      sections.forEach((section) => activeObserver?.observe(section));
+
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const summary = item.querySelector('summary');
+        if (!summary) return;
+        summary.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+        summary.addEventListener('click', (event) => {
+          event.preventDefault();
+          const nextOpen = !item.classList.contains('is-open');
+          document.querySelectorAll('.faq-item.is-open').forEach((openItem) => {
+            openItem.classList.remove('is-open');
+            openItem.removeAttribute('open');
+            openItem.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+          });
+          if (nextOpen) {
+            item.setAttribute('open', '');
+            item.classList.add('is-open');
+            summary.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      const leadForm = document.querySelector('#lead-form');
+      const leadStatus = document.querySelector('#lead-status');
+      leadForm?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const data = new FormData(form);
+        const name = String(data.get('name') || '').trim();
+        const contact = String(data.get('contact') || '').trim();
+        const goal = String(data.get('goal') || '').trim();
+        if (name.length < 2 || contact.length < 3 || !goal) {
+          if (leadStatus) leadStatus.textContent = 'Please add your name, a contact method, and a goal.';
+          return;
+        }
+        const endpoint = form.dataset.endpoint?.trim();
+        if (!endpoint) {
+          if (leadStatus) leadStatus.textContent = 'Your enquiry is ready. Connect a form endpoint here before collecting submissions.';
+          return;
+        }
+        const button = form.querySelector('button[type="submit"]');
+        if (button) button.disabled = true;
+        try {
+          const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify({ name, contact, goal, source: 'nidhi-fits-lead-form' }) });
+          if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
+          form.reset();
+          if (leadStatus) leadStatus.textContent = 'Thanks — your enquiry has been sent.';
+        } catch (error) {
+          console.error('Lead form submission failed.', error);
+          if (leadStatus) leadStatus.textContent = 'We could not send that yet. Please use WhatsApp instead.';
+        } finally {
+          if (button) button.disabled = false;
+        }
+      });
+
+      // EDIT: Add the real IDs when analytics accounts are ready.
+      const analytics = { ga4Id: '', metaPixelId: '' };
+      const loadAnalytics = () => {
+        if (analytics.ga4Id) {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+          window.gtag('js', new Date());
+          window.gtag('config', analytics.ga4Id, { anonymize_ip: true });
+          const gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analytics.ga4Id)}`;
+          document.head.appendChild(gaScript);
+        }
+        if (analytics.metaPixelId) {
+          window.fbq = window.fbq || function fbq() { (window.fbq.q = window.fbq.q || []).push(arguments); };
+          window.fbq('init', analytics.metaPixelId);
+          window.fbq('track', 'PageView');
+          const metaScript = document.createElement('script');
+          metaScript.async = true;
+          metaScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
+          document.head.appendChild(metaScript);
+        }
+      };
+      loadAnalytics();
+      document.querySelectorAll('[data-whatsapp-cta]').forEach((link) => link.addEventListener('click', () => {
+        const location = link.dataset.whatsappCta || 'unknown';
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'whatsapp_cta_click', cta_location: location });
+        if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_cta_click', { cta_location: location });
+        if (typeof window.fbq === 'function') window.fbq('trackCustom', 'whatsapp_cta_click', { cta_location: location });
+      }));
+
+      // EDIT: Add only real, approved metrics. The empty array keeps this hidden.
+      const statsData = [];
+      const statsRoot = document.querySelector('#deferred-stats');
+      if (statsData.length && statsRoot) {
+        statsRoot.hidden = false;
+        const grid = statsRoot.querySelector('.stat-grid');
+        statsData.forEach((stat) => { const card = document.createElement('div'); card.className = 'stat-card'; card.innerHTML = `<span class="stat-value">${Number(stat.value) || 0}</span><span class="stat-label">${stat.label}</span>`; grid?.appendChild(card); });
+      }
+
+      // EDIT: Add approved before/after or testimonial slides. Empty keeps this hidden.
+      const proofSlides = [];
+      const carouselRoot = document.querySelector('#deferred-carousel');
+      if (proofSlides.length && carouselRoot) {
+        carouselRoot.hidden = false;
+        const track = carouselRoot.querySelector('.proof-carousel');
+        let current = 0;
+        proofSlides.forEach((slide, index) => { const item = document.createElement('article'); item.className = `proof-slide${index === 0 ? ' is-active' : ''}`; item.innerHTML = `<p>${slide.quote}</p><small>${slide.author}</small>`; track?.appendChild(item); });
+        const renderSlide = (next) => { current = (next + proofSlides.length) % proofSlides.length; track?.querySelectorAll('.proof-slide').forEach((slide, index) => slide.classList.toggle('is-active', index === current)); };
+        carouselRoot.querySelector('[data-carousel-prev]')?.addEventListener('click', () => renderSlide(current - 1));
+        carouselRoot.querySelector('[data-carousel-next]')?.addEventListener('click', () => renderSlide(current + 1));
+      }
+    })();
+  </script>
 </body>
 </html>
