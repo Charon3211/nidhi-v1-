@@ -148,10 +148,11 @@
     /* ---------- Results / testimonials / social proof ---------- */
     .results { background:var(--pink); }
     .results-grid { display:grid; gap:1rem; }
-    .proof-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; }
-    .photo-placeholder { display:grid; place-items:center; min-height:9.5rem; padding:1.2rem; border:1px dashed rgba(96,71,52,.55); border-radius:var(--radius); background:repeating-linear-gradient(-45deg,rgba(240,197,212,.55) 0 12px,rgba(252,247,217,.68) 12px 24px); color:var(--brown); text-align:center; font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
-    .photo-placeholder span { display:block; max-width:14rem; }
-    .proof-grid .photo-placeholder:last-child { grid-column:span 2; min-height:7rem; }
+    .progress-pair { display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem; margin-top:1.4rem; }
+    .progress-card { position:relative; min-height:17rem; margin:0; overflow:hidden; border-radius:var(--radius); background:var(--brown); }
+    .progress-card img { width:100%; height:100%; min-height:17rem; object-fit:cover; }
+    .progress-card::after { position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(15,13,12,.8)); content:""; pointer-events:none; }
+    .progress-card figcaption { position:absolute; right:1rem; bottom:1rem; left:1rem; z-index:1; color:var(--cream); font:1.1rem "Archivo Black",Impact,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
     .testimonial { margin:0; padding:1.3rem; border-radius:var(--radius); background:var(--cream); box-shadow:var(--shadow); }
     .testimonial::before { display:block; color:var(--pink-deep); font-family:Georgia,serif; font-size:4rem; line-height:.55; content:"“"; }
     .testimonial p { margin:.8rem 0 1rem; font-size:1rem; font-weight:600; }
@@ -195,7 +196,8 @@
       .program-card { grid-template-rows:auto 1fr auto; }
       .coaching-grid { grid-template-columns:repeat(2,1fr); }
       .results-grid { grid-template-columns:1.2fr .8fr; align-items:start; }
-      .proof-grid .photo-placeholder { min-height:11.5rem; }
+      .progress-pair { gap:1rem; }
+      .progress-card,.progress-card img { min-height:28rem; }
       .cta-box { padding:3rem; }
     }
     @media (min-width:980px) {
@@ -309,11 +311,6 @@
     /* ---------- Asymmetric layout and bento proof grid ---------- */
     .about-layout { align-items:start; }
     @media (min-width:680px) { .expertise-card:nth-child(2),.expertise-card:nth-child(4) { position:relative; top:1rem; } }
-    .bento-grid { grid-template-columns:1.28fr .72fr; grid-template-rows:10rem 8rem; }
-    .bento-grid .bento-large { grid-row:span 2; min-height:100%; }
-    .bento-grid .bento-tall { min-height:100%; }
-    .bento-grid .bento-wide { grid-column:span 2; min-height:7rem; }
-    .proof-grid .photo-placeholder { min-height:100%; }
 
     /* ---------- Infinite ticker ---------- */
     .marquee-band { position:relative; overflow:hidden; padding:.8rem 0; border-top:1px solid rgba(252,247,217,.25); border-bottom:1px solid rgba(252,247,217,.25); background:var(--brown-dark); color:var(--cream); }
@@ -494,25 +491,19 @@
 
 
     <!-- ===================================================================
-         RESULTS / TESTIMONIALS: Replace placeholders with photos, screenshots
-         or written results, only after receiving client permission.
+         RESULTS / PERSONAL PROGRESS: Nidhi's own before-and-after story.
          =================================================================== -->
     <section class="section results reveal" id="results" aria-labelledby="results-title">
       <div class="container results-grid">
-        <div><p class="eyebrow">Progress worth celebrating</p><h2 id="results-title">Results in progress</h2><p class="muted">Real people. Real consistency. Real evidence that small steps add up.</p>
-          <div class="proof-grid bento-grid" style="margin-top:1.4rem;">
-            <!-- EDIT PHOTO: Replace with a before-and-after photo and descriptive alt text. -->
-            <div class="photo-placeholder depth-card reveal-item image-reveal bento-large"><span>Before + after photo<br>Client progress stories will appear here.</span></div>
-            <!-- EDIT SCREENSHOT: Replace with permission-based client feedback. -->
-            <div class="photo-placeholder depth-card reveal-item image-reveal bento-tall"><span>Client screenshot<br>Approved client wins will appear here.</span></div>
-            <!-- EDIT PHOTO: Replace with Nidhi's own training or coaching photo. -->
-            <div class="photo-placeholder depth-card reveal-item image-reveal bento-wide"><span>Your training photo<br>Nidhi's training and coaching gallery will appear here.</span></div>
+        <div><p class="eyebrow">Progress worth celebrating</p><h2 id="results-title">My progress</h2><p class="muted">My own improvement, built through consistency, patience and training.</p>
+          <div class="progress-pair">
+            <figure class="progress-card depth-card reveal-item image-reveal"><img src="images/nidhiimagesprogress-before.jpg" alt="Nidhi before beginning her consistent training journey" width="1290" height="1558" loading="lazy" decoding="async"><figcaption>Before</figcaption></figure>
+            <figure class="progress-card depth-card reveal-item image-reveal"><img src="images/nidhiimagesprogress-after.jpg" alt="Nidhi after building consistency through training" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>After</figcaption></figure>
           </div>
         </div>
         <div>
-          <!-- EDIT TESTIMONIAL: Add a real quote, name/initials and outcome with permission. -->
-          <figure class="testimonial depth-card reveal-item"><blockquote><p>“Client stories will be published here as results are approved for sharing.”</p></blockquote><figcaption>— Testimonials coming soon · shared with permission</figcaption></figure>
-          <p class="small muted" style="margin:1rem 0 0;">Only share client photos, screenshots and names with permission.</p>
+          <figure class="testimonial depth-card reveal-item"><blockquote><p>“My progress came from showing up, staying consistent and trusting the process.”</p></blockquote><figcaption>— Nidhi · personal progress story</figcaption></figure>
+          <p class="small muted" style="margin:1rem 0 0;">Progress looks different for everyone. Start where you are and keep building.</p>
         </div>
       </div>
     </section>
