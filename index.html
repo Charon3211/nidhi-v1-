@@ -121,9 +121,10 @@
     .price-range { font-size:clamp(1.1rem,3vw,1.45rem); }
     .program-card ul { padding-left:1.1rem; margin:0; color:rgba(60,43,34,.8); font-size:.88rem; }
     .program-card li + li { margin-top:.3rem; }
-    .program-coming-soon { display:grid; gap:.8rem; padding:1.5rem; border:1px solid var(--line); border-radius:var(--radius); background:var(--pink); }
-    .program-coming-soon h3 { margin-bottom:.1rem; }
-    .program-coming-soon .program-cta { margin-top:.3rem; }
+
+    .program-cta--soon { color:rgba(60,43,34,.58); cursor:default; }
+    .program-cta--soon:hover,.program-cta--soon:focus-visible { color:rgba(60,43,34,.58); transform:none; }
+    .program-cta--soon:hover::after,.program-cta--soon:focus-visible::after { width:2.4rem; }
     .delivery { padding-top:.8rem; border-top:1px solid var(--line); font-size:.82rem; }
     .delivery strong { display:block; margin-bottom:.1rem; text-transform:uppercase; letter-spacing:.06em; }
     .program-cta { display:inline-flex; align-items:center; gap:.45rem; width:max-content; color:var(--brown); font: .78rem "Archivo Black",Impact,sans-serif; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color .2s ease,transform .2s ease,border-color .2s ease; }
@@ -478,13 +479,29 @@
 
 
     <!-- ===================================================================
-         TRAINING PROGRAMS: Program details will be published when the offers
-         are ready. 1:1 coaching is available in the meantime.
+         TRAINING PROGRAMS: Preview cards are shown for the upcoming launch.
+         The programs are not open for enrolment yet.
          =================================================================== -->
     <section class="section programs reveal" id="programs" aria-labelledby="programs-title">
       <div class="container">
-        <div class="section-heading"><p class="eyebrow">Coming soon</p><h2 id="programs-title">Training programs</h2><p class="muted">Structured programs are on the way. For support right now, book 1:1 coaching.</p></div>
-        <div class="program-coming-soon depth-card reveal-item"><p class="eyebrow">Training programs</p><h3></h3>Launching soon</h3><p class="muted">New program details, schedules and pricing will be shared here when they are ready.</p><a class="program-cta" href="#coaching" data-magnetic></a>Book 1:1 coaching</a></div>
+        <div class="section-heading"><p class="eyebrow">Coming soon</p><h2 id="programs-title">Training programs</h2><p class="muted">Choose your starting point when the programs launch. Details and enrolment will open soon.</p></div>
+        <div class="program-list">
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Student-Friendly</h3><p class="muted small">Structured training made simple and affordable for students.</p></div><div class="price">৳1,200<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <span class="program-cta program-cta--soon" aria-label="Student-Friendly program coming soon">Coming soon</span>
+          </article>
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build muscle, lose fat, and create a stronger, more defined physique.</p></div><div class="price">৳5,000<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <span class="program-cta program-cta--soon" aria-label="Fat Loss and Muscle Building program coming soon">Coming soon</span>
+          </article>
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Strength + Conditioning</h3><p class="muted small">Build strength, improve conditioning, and train like an athlete.</p></div><div class="price">৳6,500<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <span class="program-cta program-cta--soon" aria-label="Strength and Conditioning program coming soon">Coming soon</span>
+          </article>
+        </div>
       </div>
     </section>
 
