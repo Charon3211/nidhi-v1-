@@ -1,0 +1,128 @@
+
+    <!-- ===================================================================
+         TRAINING PROGRAMS: Beginner Program removed. These two programs are
+         editable; replace sample prices, inclusions, duration and delivery.
+         =================================================================== -->
+    <section class="section programs" id="programs" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Choose your starting point</p><h2 id="programs-title">Training programs</h2><p class="muted">Simple structure. Intentional progress. A plan you can actually follow.</p></div>
+        <div class="program-list">
+          <article class="program-card depth-card">
+            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build a stronger, more capable body.</p></div><div class="price">৳5,000<small>sample price</small></div></div>
+            <!-- CUSTOMIZE PROGRAM: Replace this list with exact inclusions. -->
+            <ul><li>Goal-based training plan</li><li>Weekly progression structure</li><li>Check-in and adjustment framework</li></ul>
+            <!-- CUSTOMIZE PROGRAM: Replace duration and delivery method. -->
+            <div class="delivery"><strong>Duration</strong>[Example: 8 weeks]<br><strong>Delivery</strong>[Example: Online plan + check-ins]</div>
+          </article>
+          <article class="program-card depth-card">
+            <div class="program-top"><div><h3>Strength and Conditioning</h3><p class="muted small">Train for performance and resilience.</p></div><div class="price">৳6,500<small>sample price</small></div></div>
+            <!-- CUSTOMIZE PROGRAM: Replace this list with exact inclusions. -->
+            <ul><li>Strength and conditioning sessions</li><li>Performance-focused progressions</li><li>Mobility and recovery guidance</li></ul>
+            <!-- CUSTOMIZE PROGRAM: Replace duration and delivery method. -->
+            <div class="delivery"><strong>Duration</strong>[Example: 8 weeks]<br><strong>Delivery</strong>[Example: Online plan + video feedback]</div>
+          </article>
+        </div>
+        <!-- CUSTOMIZE: Delete this note when prices and inclusions are final. -->
+        <p class="customize-note"><strong>Coming soon:</strong> Program details are being finalized. Message Nidhi to join the early-access list and get the latest availability.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PERSONAL TRAINING: Online coaching is for all clients. In-person and
+         gym-based training are only within Dhaka. Outside Dhaka receives only
+         online coaching.
+         =================================================================== -->
+    <section class="section coaching" id="coaching" aria-labelledby="coaching-title">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Personal attention</p><h2 id="coaching-title">1:1 coaching</h2><p class="muted">Choose the format that fits your schedule, location and goals.</p></div>
+        <div class="availability"><strong>Location note:</strong> Online coaching is available to all clients. In-person and gym-based personal training are available only within Dhaka. Outside Dhaka, only online coaching is offered.</div>
+        <div class="coaching-grid">
+          <article class="coaching-card depth-card">
+            <h3>Online coaching</h3><div class="price">৳5,000<small>4 sessions</small></div>
+            <dl class="coaching-meta"><div><dt>Delivery</dt><dd>Online coaching · 4 sessions</dd></div><div><dt>Location</dt><dd>All clients, anywhere</dd></div>
+              <!-- CUSTOMIZE ONLINE COACHING: State exactly what is included. -->
+              <div><dt>Includes</dt><dd>[Example: video calls, personalized plan, form feedback and check-ins]</dd></div>
+            </dl><span class="region-note">Available nationwide</span>
+          </article>
+          <article class="coaching-card depth-card">
+            <h3>Personal training</h3><div class="price">৳15,000<small>1 month · weekly</small></div>
+            <dl class="coaching-meta"><div><dt>Delivery</dt><dd>In-person or gym-based · weekly</dd></div><div><dt>Location</dt><dd>Dhaka only</dd></div>
+              <!-- CUSTOMIZE PERSONAL TRAINING: State exactly what is included. -->
+              <div><dt>Includes</dt><dd>[Example: 4 coached sessions, plan updates and progress tracking]</dd></div>
+            </dl><span class="region-note">Dhaka only</span>
+          </article>
+        </div>
+        <!-- CUSTOMIZE: Confirm rates, session count and scope before launch. -->
+        <p class="small muted" style="margin:1.2rem 0 0;">Sample rates shown for launch planning. Confirm availability and final scope with Nidhi before booking.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         RESULTS / TESTIMONIALS: Replace placeholders with photos, screenshots
+         or written results, only after receiving client permission.
+         =================================================================== -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container results-grid">
+        <div><p class="eyebrow">Progress worth celebrating</p><h2 id="results-title">Results in progress</h2><p class="muted">Real people. Real consistency. Real evidence that small steps add up.</p>
+          <div class="proof-grid" style="margin-top:1.4rem;">
+            <!-- CUSTOMIZE PHOTO: Replace with a before-and-after photo and descriptive alt text. -->
+            <div class="photo-placeholder depth-card"><span>Before + after photo<br>[Add client result]</span></div>
+            <!-- CUSTOMIZE SCREENSHOT: Replace with permission-based client feedback. -->
+            <div class="photo-placeholder depth-card"><span>Client screenshot<br>[Add feedback with permission]</span></div>
+            <!-- CUSTOMIZE PHOTO: Replace with Nidhi's own training or coaching photo. -->
+            <div class="photo-placeholder depth-card"><span>Your training photo<br>[Add Nidhi's own photo]</span></div>
+          </div>
+        </div>
+        <div>
+          <!-- CUSTOMIZE TESTIMONIAL: Add a real quote, name/initials and outcome with permission. -->
+          <figure class="testimonial depth-card"><blockquote><p>“[Add a short client quote about their experience, consistency or result.]”</p></blockquote><figcaption>— [Client first name or initials] · [Goal / timeframe]</figcaption></figure>
+          <p class="small muted" style="margin:1rem 0 0;">Only share client photos, screenshots and names with permission.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         FAQ: Replace each bracketed answer with Nidhi's actual policy and
+         scope. The nutrition answer must not promise services outside scope.
+         =================================================================== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container"><div class="section-heading"><p class="eyebrow">Good to know</p><h2 id="faq-title">Your questions, answered</h2></div><div class="faq-list">
+        <details><summary>Do I need gym experience?</summary>
+          <!-- CUSTOMIZE FAQ ANSWER: Replace this placeholder. --><p>[Placeholder answer: No. I’ll meet you at your current level and teach you the movements step by step.]</p>
+        </details>
+        <details><summary>Do I need a gym?</summary>
+          <!-- CUSTOMIZE FAQ ANSWER: Explain home equipment, gym requirements and alternatives. --><p>[Placeholder answer: It depends on your chosen plan. Add the equipment and space requirements for each service here.]</p>
+        </details>
+        <details><summary>Can I train if I&apos;m a beginner?</summary>
+          <!-- CUSTOMIZE FAQ ANSWER: Replace this placeholder. --><p>[Placeholder answer: Yes. Your plan will be adjusted to your ability, experience, schedule and goal.]</p>
+        </details>
+        <details><summary>Is nutrition included?</summary>
+          <!-- CUSTOMIZE FAQ ANSWER: State exactly what is and is not included. Do not promise meal plans, medical advice or services outside your qualifications. --><p>[Placeholder answer: Clearly state whether nutrition guidance is included, what form it takes and any limitations.]</p>
+        </details>
+        <details><summary>How do I get started?</summary>
+          <!-- CUSTOMIZE FAQ ANSWER: Explain the first step, response time and onboarding process. --><p>[Placeholder answer: Tap “Start training,” send your goals and availability, and I’ll reply with the next steps.]</p>
+        </details>
+      </div><p class="scope-note"><strong>Coach reminder:</strong> Replace every placeholder answer with your actual offer, qualifications and process before launching.</p></div>
+    </section>
+
+    <!-- ===================================================================
+         WORK WITH ME: Current buttons use WhatsApp +880 1621-172535.
+         CONTACT METHOD: Replace each WhatsApp href with a full Google Form URL
+         if that becomes the preferred contact method.
+         =================================================================== -->
+    <section class="section work-with-me" id="contact" aria-labelledby="contact-title"><div class="container"><div class="cta-box depth-card">
+      <p class="eyebrow">Ready when you are</p><h2 id="contact-title">Start training with Nidhi</h2><p>Tell me where you are now, where you want to go and what support you need. We’ll find the right starting point.</p>
+      <div class="cta-actions">
+        <!-- CONTACT METHOD: Replace this href with a Google Form URL if preferred. -->
+        <a class="button button--light" href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20enquire%20about%20coaching." target="_blank" rel="noopener">Book / enquire now</a>
+        <a class="button button--outline" href="#faq">Read FAQs</a>
+      </div>
+      <!-- CUSTOMIZE CONTACT: State preferred contact method and expected response time. -->
+      <p class="contact-note">Preferred contact: WhatsApp at +880 1621-172535 · [Add expected response time here]</p>
+    </div></div></section>
+  </main>
+
+  <!-- FOOTER: Add Instagram, email or other social links when ready. -->
+  <footer><div class="container footer-wrap"><p>© 2026 Nidhi FITS · Train smart. Get strong.</p><!-- CUSTOMIZE FOOTER: Add Instagram handle or email here. --><p>[Add Instagram handle or email]</p></div></footer>
+</body>
+</html>
