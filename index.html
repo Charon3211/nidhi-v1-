@@ -122,7 +122,10 @@
     .program-card li + li { margin-top:.3rem; }
     .delivery { padding-top:.8rem; border-top:1px solid var(--line); font-size:.82rem; }
     .delivery strong { display:block; margin-bottom:.1rem; text-transform:uppercase; letter-spacing:.06em; }
-    .status-note { margin:1rem 0 0; padding:1rem; border-left:4px solid var(--brown); background:var(--pink); font-size:.84rem; }
+    .program-cta { display:inline-flex; align-items:center; gap:.45rem; width:max-content; color:var(--brown); font: .78rem "Archivo Black",Impact,sans-serif; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; transition:color .2s ease,transform .2s ease,border-color .2s ease; }
+    .program-cta::after { width:2.4rem; height:1px; background:currentColor; content:""; transition:width .2s ease; }
+    .program-cta:hover,.program-cta:focus-visible { color:var(--brown-dark); transform:translateX(.2rem) scale(1.02); }
+    .program-cta:hover::after,.program-cta:focus-visible::after { width:3.2rem; }
 
     /* ---------- Personal training / regional availability ---------- */
     .coaching { background:var(--brown); color:var(--cream); }
@@ -452,30 +455,29 @@
     </section>
 
     <!-- ===================================================================
-         TRAINING PROGRAMS: Two launch programs are
-         editable; replace draft rates, inclusions, duration and delivery.
+         TRAINING PROGRAMS: Three structured launch offers with transparent
+         pricing, duration and inclusions.
          =================================================================== -->
     <section class="section programs reveal" id="programs" aria-labelledby="programs-title">
       <div class="container">
         <div class="section-heading"><p class="eyebrow">Choose your starting point</p><h2 id="programs-title">Training programs</h2><p class="muted">Simple structure. Intentional progress. A plan you can actually follow.</p></div>
         <div class="program-list">
           <article class="program-card depth-card reveal-item">
-            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build a stronger, more capable body.</p></div><div class="price">৳5,000<small>draft rate</small></div></div>
-            <!-- EDIT PROGRAM: Replace this list with exact inclusions. -->
-            <ul><li>Goal-based training plan</li><li>Weekly progression structure</li><li>Check-in and adjustment framework</li></ul>
-            <!-- EDIT PROGRAM: Replace duration and delivery method. -->
-            <div class="delivery"><strong>Duration</strong>8 weeks<br><strong>Delivery</strong>Online plan + check-ins</div>
+            <div class="program-top"><div><h3>Student-Friendly</h3><p class="muted small">Structured training made simple and affordable for students.</p></div><div class="price">৳1,200<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <a class="program-cta" data-whatsapp-cta="student-program" data-magnetic href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20enrol%20in%20the%20Student-Friendly%20program." target="_blank" rel="noopener">Enroll now</a>
           </article>
           <article class="program-card depth-card reveal-item">
-            <div class="program-top"><div><h3>Strength and Conditioning</h3><p class="muted small">Train for performance and resilience.</p></div><div class="price">৳6,500<small>draft rate</small></div></div>
-            <!-- EDIT PROGRAM: Replace this list with exact inclusions. -->
-            <ul><li>Strength and conditioning sessions</li><li>Performance-focused progressions</li><li>Mobility and recovery guidance</li></ul>
-            <!-- EDIT PROGRAM: Replace duration and delivery method. -->
-            <div class="delivery"><strong>Duration</strong>8 weeks<br><strong>Delivery</strong>Online plan + video feedback</div>
+            <div class="program-top"><div><h3>Fat Loss + Muscle Building</h3><p class="muted small">Build muscle, lose fat, and create a stronger, more defined physique.</p></div><div class="price">৳5,000<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <a class="program-cta" data-whatsapp-cta="fat-loss-program" data-magnetic href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20start%20the%20Fat%20Loss%20%2B%20Muscle%20Building%20program." target="_blank" rel="noopener">Start your transformation</a>
+          </article>
+          <article class="program-card depth-card reveal-item">
+            <div class="program-top"><div><h3>Strength + Conditioning</h3><p class="muted small">Build strength, improve conditioning, and train like an athlete.</p></div><div class="price">৳6,500<small>8 weeks</small></div></div>
+            <ul><li>Goal-based training plan</li><li>Weekly progression</li><li>Exercise demo videos</li></ul>
+            <a class="program-cta" data-whatsapp-cta="strength-program" data-magnetic href="https://wa.me/8801621172535?text=Hi%20Nidhi%2C%20I%27d%20like%20to%20train%20with%20purpose." target="_blank" rel="noopener">Train with purpose</a>
           </article>
         </div>
-        <!-- EDIT: Delete this note when prices and inclusions are final. -->
-        <p class="status-note"><strong>Coming soon:</strong> Program details are being finalized. Message Nidhi to join the early-access list and get the latest availability.</p>
       </div>
     </section>
 
